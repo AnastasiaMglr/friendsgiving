@@ -1,0 +1,61 @@
+{
+    "Celia" :
+        {"name": "Celia", "profile":"/profile/Celia.png",
+        "strengths": "Never runs out of conversation topics", 
+        "weaknesses": "Alcohol hangover (we see ya)", 
+        "images": ["/characters/celia_transparent_1.png","/characters/celia_transparent_2.png","/characters/celia_transparent_3.png"]},
+    "Daniel" :
+        {"name": "Dan", "profile":"/profile/Daniel.png",
+        "strengths": "Never miss a recipe", 
+        "weaknesses": "Cookies :3",  
+        "images": ["/characters/daniel_transparent_1.png","/characters/daniel_transparent_2.png"]},
+    "Ana" :
+        {"name": "Ana", "profile":"/profile/Ana.png",
+        "strengths": "Unhinged ideas", 
+        "weaknesses": "approximates time by 1hour", 
+        "images": ["/characters/Anastasia_1_transparent.png","/characters/Anastasia_2_transparent.png"]},
+    "Zach" :
+        {"name": "Zach", "profile":"/profile/Zach.png",
+        "strengths": "", 
+        "weaknesses": "",
+        "images": ["/characters/zach_transparent_1.png","/characters/zach_transparent_2.png"]},
+    "Pete" :
+        {"name": "Pete", "profile":"/profile/Pete.png",
+        "strengths": "Meticulous spice organizer", 
+        "weaknesses": "Oups disctracted to write this",
+        "images": ["/characters/peter_transparent_1.png","/characters/peter_transparent_2.png"]},
+    "Ed" :
+        {"name": "Ed", "profile":"/profile/Ed.png",
+        "strengths": "Wise man", 
+        "weaknesses": "Persil cuteness", 
+        "images": ["/characters/ed_transparent_1.png","/characters/ed_transparent_2.png"]},
+    "Alex" :
+        {"name": "Alex", "profile":"/profile/Alex.png",
+        "strengths": "Trivia master", 
+        "weaknesses": "Unexpected disappearances",  
+        "images": ["/characters/alex_transparent_1.png","/characters/alex_transparent_2.png"]},
+    "Geet" :
+        {"name": "Geet", "profile":"/profile/Geet.png",
+        "strengths": "Strong arms muscles", 
+        "weaknesses": "", 
+        "picture": "Anne.jpg"},
+    "Holly" :
+        {"name": "Holly", "profile":"/profile/Holly.png",
+        "strengths": "Australian courage", 
+        "weaknesses": "Hockey games", 
+        "images": ["/characters/holly_transparent_1.png","/characters/holly_transparent_2.png"]},
+    "Jess" :
+        {"name": "Jess", "profile":"/profile/Jess.png", 
+        "strengths": "Peaceful soul", 
+        "weaknesses": "Naked necessities",  
+        "images": ["/characters/jess_transparent_1.png","/characters/jess_transparent_2.png"]},
+    "Anne" :
+        {"name": "Annie", "profile":"/profile/Annie.png",
+        "strengths": "Running, Tennis, nothing stops her",  
+        "weaknesses": "Cute animals",  
+        "picture": "Anne.jpg"},
+    "Jessie" :
+        {"name": "Jessie", "profile":"/profile/Jessie.png",
+        "strengths": "5 stars hostess", 
+        "weaknesses": "Nature"}
+}

@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "arcadeclassic";
+  src: url("/fonts/ARCADECLASSIC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bytebounce";
+  src: url("/fonts/ByteBounce.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-fade-out {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+body.characters-page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../assets/bg_simple.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.characters-page {
+  min-height: 100vh; /* prend toute la hauteur de l’écran */
+  display: flex;
+  align-items: center;   /* centre verticalement */
+  justify-content: center; /* centre horizontalement */
+  flex-direction: column; /* pour empiler h1 et le reste en colonne */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.characters-page h1 {
+  margin-bottom: 20px;
+  font-size: 70px;  /* text-sm */
+  font-family: "arcadeclassic";
+
+  /* couleur de remplissage */
+  color: #280b37; 
+
+  /* contour personnalisable */
+  -webkit-text-stroke: 0.1px #3c383e; /* change #ffffff par n'importe quelle couleur */
+
+  /* ombre pour relief / glow */
+  text-shadow: 
+    0px 0px 4px #9c4ec7,
+    0px 0px 6px #9c4ec7;
+}
+
+.characters-list {
+  opacity: 0;
+  transition: opacity 10s ease; /* durée du fondu */
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2 colonnes */
+  gap: 20px;
+  justify-content: center; /* centre la grille */
+  max-width: 600px; /* limite la largeur totale */
+  margin: 0 auto; /* centre la grille horizontalement */
+  opacity: 0;
+  transition: opacity 10s ease; /* durée du fondu */
+}
+
+.characters-list.show,
+.characters-grid.show {
+  opacity: 1;
+}
+
+.character-card {
+  width: 120px;           /* largeur fixe */
+  aspect-ratio: 1 / 1;    /* carré parfait */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+  font-size: 10px;  /* text-sm */
+}
+
+/* .character-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.6); /* bordure un peu plus visible au hover
+} */
+
+.character-card img.character-image {
+  max-width: 80%;   /* reste à l'intérieur de la carte */
+  max-height: 80%;  /* reste à l'intérieur de la carte */
+  transition: box-shadow 0.3s ease;
+  background-color: #1F1828ff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.character-card:hover img.character-image {
+  filter: brightness(1.2); /* plus clair */
+}
+
+.character-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.character-name {
+  margin: 0 0 2px 0;
+  font-size: 25px;
+  color: #e2dadab6;
+  font-family: "arcadeclassic";
+}
+
+.character-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(31, 24, 40, 0.9); /* deep purple background */
+  padding: 20px;
+  min-width: 400px;
+  display: flex;
+  gap: 20px;
+  font-family: 'bytebounce', monospace;
+  color: #e2dadaB6; /* character name color */
+
+  /* main border */
+  border: 3px solid #555;  /* dark gray pixel border */
+  border-radius: 6px;
+
+  /* multiple pixel-style borders with box-shadow */
+  box-shadow:
+    0 0 0 2px #666,          /* subtle outer gray layer */
+    0 0 0 5px #444,          /* deeper gray layer */
+    0 0 0 8px rgba(31,24,40,0.8), /* blends with background for depth */
+    0 4px 15px rgba(0,0,0,0.5);   /* soft drop shadow for floating effect */
+
+  /* pixel text shadow for retro look */
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 0 #000;
+}
+
+/* Optional: left side column for stats or text */
+.character-popup-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+.character-name {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.attribute-label {
+  font-weight: bold;
+  font-size: 1.2rem; /* bigger than text */
+  margin-right: 6px;
+  display: block;
+}
+
+.attribute-text {
+  font-weight: normal;
+  display: block; /* ensures text wraps naturally */
+}
+
+/* Optional: right side image or character portrait */
+.character-popup-right {
+  width: 150px;
+  height: 200px;       /* placeholder for character portrait */
+  image-rendering: pixelated; /* pixel-perfect scaling */
+}
+
+
+.character-popup-right img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 10s ease; /* pour qu'il suive l'animation du container */
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 2s ease, transform 2s ease; /* transition pour le fondu */
+  opacity: 1;                     /* visible par défaut */
+  transform: scaleX(1);
+}
+
+/* Quand on clique */
+.intro-title.fade-out {
+  opacity: 0;                     /* disparaît progressivement */
+  transform: scaleX(2);
+}
+
+.intro.fade-out {
+  opacity: 0;                     /* disparaît progressivement */
+}
+
+.arrow img {
+  width: 80px;     /* largeur de l’image */
+  height: auto;    /* garde les proportions */
+  cursor: pointer; /* change le curseur */
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.arrow img:hover {
+  transform: scale(1.1); }
+
+
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(20, 20, 30, 0.8);
+  color: white;
+  font-family: "arcadeclassic", sans-serif;
+  padding: 10px 16px;
+  border: 2px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 999;
+}
+
+.music-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
