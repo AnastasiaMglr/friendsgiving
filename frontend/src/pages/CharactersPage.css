@@ -129,25 +129,17 @@ body.characters-page {
   padding: 20px;
   min-width: 400px;
   display: flex;
-  gap: 20px;
-  font-family: 'bytebounce', monospace;
-  color: #e2dadaB6; /* character name color */
+  gap: 0px;
 
   /* main border */
-  border: 3px solid #555;  /* dark gray pixel border */
-  border-radius: 6px;
+  border: 1px solid #938989;  /* dark gray pixel border */
+  border-radius: 0px;
 
   /* multiple pixel-style borders with box-shadow */
   box-shadow:
-    0 0 0 2px #666,          /* subtle outer gray layer */
-    0 0 0 5px #444,          /* deeper gray layer */
-    0 0 0 8px rgba(31,24,40,0.8), /* blends with background for depth */
-    0 4px 15px rgba(0,0,0,0.5);   /* soft drop shadow for floating effect */
+    0px 0px 0px 2px #666;          /* subtle outer gray layer */
 
   /* pixel text shadow for retro look */
-  text-shadow:
-    1px 1px 0 #000,
-    2px 2px 0 #000;
 }
 
 /* Optional: left side column for stats or text */
@@ -160,34 +152,47 @@ body.characters-page {
   gap: 8px;
 }
 
-.character-name {
+.character-name-popup {
   font-size: 1.8rem;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
+  font-family: "arcadeclassic";
+  color: #e2dadaB6;
 }
 
 .attribute-label {
   font-weight: bold;
-  font-size: 1.2rem; /* bigger than text */
-  margin-right: 6px;
+  font-size: 2rem; /* bigger than text */
+  margin-right: 3px;
   display: block;
+  font-family: 'bytebounce';
+  color: #e2dadaB6;
+
+  /* pixel art effect */
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none; /* enlever si tu avais un flou résiduel */
 }
 
 .attribute-text {
   font-weight: normal;
+  font-size: 1.5rem; /* slightly smaller */
   display: block; /* ensures text wraps naturally */
+  font-family: 'bytebounce', monospace;
+  color: #ffffffb6;
 }
 
 /* Optional: right side image or character portrait */
 .character-popup-right {
-  width: 150px;
-  height: 200px;       /* placeholder for character portrait */
+  width: 200px;
+  height: 250px;       /* placeholder for character portrait */
   image-rendering: pixelated; /* pixel-perfect scaling */
 }
 
 
 .character-popup-right img {
-  max-width: 100%;
-  max-height: 200px;
+  max-width: 200%;
+  max-height: 250px;
 }
 
 .intro-title {

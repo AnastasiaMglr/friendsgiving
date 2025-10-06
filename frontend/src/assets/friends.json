@@ -2,7 +2,7 @@
     "Celia" :
         {"name": "Celia", "profile":"/profile/Celia.png",
         "strengths": "Never runs out of conversation topics", 
-        "weaknesses": "Alcohol hangover (we see ya)", 
+        "weaknesses": "Alcohol hangover", 
         "images": ["/characters/celia_transparent_1.png","/characters/celia_transparent_2.png","/characters/celia_transparent_3.png"]},
     "Daniel" :
         {"name": "Dan", "profile":"/profile/Daniel.png",
@@ -12,17 +12,17 @@
     "Ana" :
         {"name": "Ana", "profile":"/profile/Ana.png",
         "strengths": "Unhinged ideas", 
-        "weaknesses": "approximates time by 1hour", 
+        "weaknesses": "Approximates time by 1hour", 
         "images": ["/characters/Anastasia_1_transparent.png","/characters/Anastasia_2_transparent.png"]},
     "Zach" :
         {"name": "Zach", "profile":"/profile/Zach.png",
-        "strengths": "", 
-        "weaknesses": "",
+        "strengths": "Recycle objects master", 
+        "weaknesses": "DesPins French tacos",
         "images": ["/characters/zach_transparent_1.png","/characters/zach_transparent_2.png"]},
     "Pete" :
         {"name": "Pete", "profile":"/profile/Pete.png",
         "strengths": "Meticulous spice organizer", 
-        "weaknesses": "Oups disctracted to write this",
+        "weaknesses": "Oups too disctracted to write this",
         "images": ["/characters/peter_transparent_1.png","/characters/peter_transparent_2.png"]},
     "Ed" :
         {"name": "Ed", "profile":"/profile/Ed.png",
@@ -37,7 +37,7 @@
     "Geet" :
         {"name": "Geet", "profile":"/profile/Geet.png",
         "strengths": "Strong arms muscles", 
-        "weaknesses": "", 
+        "weaknesses": "Sunburns", 
         "picture": "Anne.jpg"},
     "Holly" :
         {"name": "Holly", "profile":"/profile/Holly.png",
