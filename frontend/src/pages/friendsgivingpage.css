@@ -119,6 +119,7 @@ body.menu-page.page-fade-out {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;  /* p-2 */
   margin-bottom: 0.5rem; /* mb-2 */
+  cursor: pointer;
 }
 
 /* Left side of menu item */
@@ -177,15 +178,16 @@ body.menu-page.page-fade-out {
 }
 
 /* Remove item button */
-.remove-btn {
+.hide-btn {
   padding: 0.25rem;       /* p-1 */
   color: #E79741ff;         /* text-red-500 */
   border-radius: 9999px;  /* rounded-full */
   background: none;
   border: none;
   cursor: pointer;
+  font-family: "WonderfulHandwriting";
 }
-.remove-btn:hover {
+.hide-btn:hover {
   background-color: #fee2e2; /* hover:bg-red-100 */
 }
 
@@ -200,6 +202,11 @@ body.menu-page.page-fade-out {
   border: none;
   cursor: pointer;
 }
+
+.add-btn:hover {
+  text-decoration: underline;
+}
+
 .add-btn svg {
   margin-right: 0.25rem;
 }
@@ -274,6 +281,24 @@ body.menu-page.page-fade-out {
   font-size: 1.2rem;
   cursor: pointer;
   color:#774135ff;
+}
+
+.comment-bubble .remove-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.comment-bubble .remove-btn:hover {
+  background: #CD703Bff;
 }
 
 .audio-player {

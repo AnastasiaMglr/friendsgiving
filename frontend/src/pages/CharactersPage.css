@@ -62,7 +62,7 @@ body.characters-page {
 
 .characters-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 2 colonnes */
+  grid-template-columns: repeat(5, 1fr); /* 2 colonnes */
   gap: 20px;
   justify-content: center; /* centre la grille */
   max-width: 600px; /* limite la largeur totale */
@@ -88,12 +88,6 @@ body.characters-page {
   text-align: center;
   font-size: 10px;  /* text-sm */
 }
-
-/* .character-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.6); /* bordure un peu plus visible au hover
-} */
 
 .character-card img.character-image {
   max-width: 80%;   /* reste à l'intérieur de la carte */
@@ -189,10 +183,26 @@ body.characters-page {
   image-rendering: pixelated; /* pixel-perfect scaling */
 }
 
-
 .character-popup-right img {
   max-width: 200%;
   max-height: 250px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* ← on change left:10px par right:10px */
+  background: transparent;
+  border: none;
+  color: #e2dadaB6;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  color: #e2dadaB6;
 }
 
 .intro-title {

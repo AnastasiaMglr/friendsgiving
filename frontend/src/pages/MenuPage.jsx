@@ -11,13 +11,19 @@ import { bgAudio, fadeAudio } from "./audioSingleton";
 
 
 // Composant pour afficher les bulles de commentaire de chaque item
-const CommentBubble = ({ title, comment, friend, onClose }) => {
+const CommentBubble = ({ title, comment, friend, onClose, canRemove, onRemove }) => {
   return (
     <div className="comment-bubble">
       <button className="close-btn" onClick={onClose}>×</button>
       <h3>{title}</h3>
       {comment && <p>{comment}</p>}
       {friend && <small>{friend}</small>}
+            {/* Right side: remove button */}
+       {canRemove&& (
+        <button className="remove-btn" onClick={onRemove}>
+        Remove
+      </button>
+       )}
     </div>
   );
 };
@@ -32,7 +38,7 @@ const MenuItem = ({ item, currentUser, onRemove }) => {
 
   return (
     <>
-    <div className="menu-item">
+    <div className="menu-item" onClick={() => setShowComment(!showComment)}>
       {/* Left side: title, comment, friend, toggle */}
       <div className="menu-item-left">
         <span className="menu-item-title">{item.title}</span>
@@ -42,18 +48,13 @@ const MenuItem = ({ item, currentUser, onRemove }) => {
         <span className="menu-item-friend">{item.friend}</span>
 
         <button
-          className="remove-btn"
-          onClick={() => setShowComment(!showComment)}
+          className="hide-btn"
+          onClick={(e) =>
+            {e.stopPropagation(); 
+            setShowComment(!showComment);}}
         >
           {showComment ? "Hide" : "..."}
         </button>
-
-      {/* Right side: remove button */}
-       {canRemove&& (
-        <button className="remove-btn" onClick={onRemove}>
-        <Minus size={16} />
-      </button>
-       )}
       </div>
     </div>
     {showComment && (
@@ -61,7 +62,15 @@ const MenuItem = ({ item, currentUser, onRemove }) => {
           title={item.title}
           comment={item.comment}
           friend={item.friend}
-          onClose={() => setShowComment(false)}
+          onClose={(e) => 
+            {e.stopPropagation();
+            setShowComment(false);}}
+          canRemove={canRemove}
+          onRemove={(e) => {
+            e.stopPropagation();
+            onRemove();
+            setShowComment(false);
+          }}
         />
       )}
     </>
@@ -212,7 +221,7 @@ export default function FriendsgivingMenu() {
 
   
   const categories = [
-    { name: "Appetizers", subcategories: ["Cocktails", "Other Drinks","Snacks"] },
+    { name: "Appetizers", subcategories: ["Drinks","Snacks"] },
     { name: "First Course", subcategories: [] },
     { name: "Main Course", subcategories: [] },
     { name: "Dessert", subcategories: [] },

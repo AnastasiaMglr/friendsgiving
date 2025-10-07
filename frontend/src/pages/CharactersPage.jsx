@@ -20,6 +20,7 @@ const CharacterPopup = ({ char, onSelect }) => {
 
   return (
     <div className="character-popup">
+      <button className="close-button">✕</button>
       <div className="character-popup-left">
         <h2 className="character-name">{char.name}</h2>
         <p>

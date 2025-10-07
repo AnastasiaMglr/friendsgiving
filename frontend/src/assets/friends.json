@@ -13,7 +13,7 @@
         {"name": "Ana", "profile":"/profile/Ana.png",
         "strengths": "Unhinged ideas", 
         "weaknesses": "Approximates time by 1hour", 
-        "images": ["/characters/Anastasia_1_transparent.png","/characters/Anastasia_2_transparent.png"]},
+        "images": ["/characters/ana_transparent_1.png","/characters/ana_transparent_2.png"]},
     "Zach" :
         {"name": "Zach", "profile":"/profile/Zach.png",
         "strengths": "Recycle objects master", 
@@ -32,7 +32,7 @@
     "Alex" :
         {"name": "Alex", "profile":"/profile/Alex.png",
         "strengths": "Trivia master", 
-        "weaknesses": "Unexpected disappearances",  
+        "weaknesses": "Leicas",  
         "images": ["/characters/alex_transparent_1.png","/characters/alex_transparent_2.png"]},
     "Geet" :
         {"name": "Geet", "profile":"/profile/Geet.png",
@@ -49,13 +49,21 @@
         "strengths": "Peaceful soul", 
         "weaknesses": "Naked necessities",  
         "images": ["/characters/jess_transparent_1.png","/characters/jess_transparent_2.png"]},
-    "Anne" :
+    "Annie" :
         {"name": "Annie", "profile":"/profile/Annie.png",
         "strengths": "Running, Tennis, nothing stops her",  
         "weaknesses": "Cute animals",  
-        "picture": "Anne.jpg"},
+        "images": ["/characters/annie_transparent_1.png","/characters/annie_transparent_2.png","/characters/annie_transparent_3.png"]},
     "Jessie" :
         {"name": "Jessie", "profile":"/profile/Jessie.png",
         "strengths": "5 stars hostess", 
-        "weaknesses": "Nature"}
+        "weaknesses": "Nature"},
+    "Megann" :
+        {"name": "Megann", "profile":"/profile/Megann.png",
+        "strengths": "Artist martermind", 
+        "weaknesses": "Professional unintentional scavenger hunt organizer"},
+    "Zaza" :
+        {"name": "Zaza", "profile":"/profile/Zarema.png",
+        "strengths": "Sweeter than honey", 
+        "weaknesses": "Can't say no to karaoke"}
 }
